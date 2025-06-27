@@ -4,7 +4,6 @@ mongoose.connect("mongodb://localhost:27017/multerdbtest");
 
 const userSchema = mongoose.Schema({
     name: String,
-    username: String,
-    image: String
+    image: Buffer
 });
-mongoose.model("user", userSchema);
+module.exports = mongoose.model("user", userSchema);
